@@ -1,6 +1,6 @@
 ### Supplementary Code for:
 ### Textual Messaging of ISIS’s al-Naba and the Context Drivers that Correspond to Strategic Changes
-#### Authors: Ayse D. Lokmanoglu, PhD;\ Carol K. Winkler, PhD;\ Monerah AlMahmoud, PhD;\ Kayla McMinimy;\ Katherine Kountz
+#### Authors: [Ayse D. Lokmanoglu, PhD](https://www.adenizlok.com/); [Carol K. Winkler, PhD](https://tcv.gsu.edu/profile/carol-winkler/); [Monerah Almahmoud, PhD](https://sites.google.com/view/almahmoudm/about); [Kayla McMinimy](https://tcv.gsu.edu/profile/kayla-mcminimy/); and, [Katherine Kountz](https://tcv.gsu.edu/profile/katherine-kountz/)
 
 The code below includes all the steps of the methodology, and the visualizations. 
 
