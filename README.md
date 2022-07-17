@@ -10,7 +10,13 @@ For questions, or more information on the code please contact:
 Ayse D. Lokmanoglu\
 ayse [dot] lokmanoglu [at] nortwestern [dot] edu
 
-```{r include=FALSE}
+```{r setup, }
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+```
+
+```{r }
 library(forecast)
 library(tseries)
 library(dynlm)
@@ -33,18 +39,18 @@ library(ggeffects)
 library(stargazer)
 ```
 Load the dataset, cluster prominences by issue
-```{r include=FALSE}
+```{r }
 mydatalong <- read.csv("https://dataverse.harvard.edu/api/access/datafile/6380742")
 head(mydatalong)
 
 ## remove the index column from csv
 mydatalong<-mydatalong %>%
-  mutate(date = ymd(df2$Group.1)) %>%
+  mutate(date = ymd(mydatalong$Group.1)) %>%
   dplyr::select(-X, -Group.1)
 ```
 
 ##### Network Visualizations
-```{r include=FALSE}
+```{r}
 prevalance<-ggplot(mydatalong,aes(x=date))+
   geom_col(aes(y=theta,fill=theme),position = "fill",width = 4)+
   scale_x_date(date_breaks="2 months", date_labels = "%b-%Y")+
@@ -97,7 +103,7 @@ ggarrange(prevalance +rremove("xlab"), line +rremove("xlab"),
 
 ##### Regression Analysis
 Load dataset
-```{r include=FALSE}
+```{r }
 mydata <- read.csv("https://dataverse.harvard.edu/api/access/datafile/5736741",
                    sep='\t',
                  header=TRUE)
@@ -109,7 +115,7 @@ mydata <- mydata %>%
 ```
 
 ###### Ideology
-```{r include=FALSE}
+```{r }
 gy_logit7 <- betareg(thememonth1 ~ religiousholidaysmuslim, data = mydata)
 gy_logit8 <- betareg(thememonth2 ~ religiousholidaysmuslim, data = mydata)
 gy_logit9 <- betareg(thememonth3 ~ religiousholidaysmuslim, data = mydata)
@@ -121,8 +127,7 @@ gy_logit14 <- betareg(thememonth2 ~ religiousholidaysjewish, data = mydata)
 gy_logit15 <- betareg(thememonth3 ~ religiousholidaysjewish, data = mydata)
 ```
 Print tables for publication
-```{r include=FALSE}
-
+```{r, results='asis'}
 stargazer(gy_logit7,gy_logit8, gy_logit9,
           align = T, df = F,
           star.char = c("*", "**", "***"),
@@ -144,23 +149,23 @@ stargazer(gy_logit13,gy_logit14, gy_logit15,
 
 
 ###### Air Strikes
-```{r include=FALSE}
+```{r }
 gy_logit4 <- betareg(thememonth1 ~ airstrikeslog, data = mydata)
 gy_logit5 <- betareg(thememonth2 ~ airstrikeslog, data = mydata)
 gy_logit6 <- betareg(thememonth3 ~ airstrikeslog, data = mydata)
 ```
 Print for publication
-```{r include=FALSE}
+```{r, results='asis'}
 stargazer(gy_logit4,gy_logit5, gy_logit6,
           align = T, df = F,
           star.char = c("*", "**", "***"),
           star.cutoffs = c(.05, .01, .001),
-          type = "html", digits = 2, out = "Beta Regression Table4.html")
+          type = "html", digits = 2)
 ```
 
 ###### Territorial Control
 Theme 1
-```{r include=FALSE}
+```{r }
 ###theme1
 testtheme1.1 <- dplyr::select(mydata,thememonth1,territorialmonthlychange)
 testtheme1.1<- ts(testtheme1.1)
@@ -185,7 +190,7 @@ plot(irf_theme1.1_territory)
 plot(fevd(fitvar1.1))
 ```
 Theme 2
-```{r include=FALSE}
+```{r }
 testtheme2.1 <- dplyr::select(mydata, thememonth2,territorialmonthlychange)
 testtheme2.1 <- ts(testtheme2.1)
 plot(testtheme2.1)
@@ -210,7 +215,7 @@ plot(irf_theme2.1_territory)
 plot(fevd(fitvar2.1))
 ```
 Theme 3
-```{r include=FALSE}
+```{r }
 testtheme3.1 <- dplyr::select(mydata, thememonth3,territorialmonthlychange)
 testtheme3.1 <- ts(testtheme3.1)
 plot(testtheme3.1)
@@ -235,7 +240,7 @@ plot(irf_theme3.1_territory)
 plot(fevd(fitvar3.1))
 ```
 Write the VAR results
-```{r include=FALSE}
+```{r }
 vartheme1G <- fitvar1.1[["varresult"]]$territorialmonthlychange
 vartheme2G <- fitvar2.1[["varresult"]]$territorialmonthlychange
 vartheme3G <- fitvar3.1[["varresult"]]$territorialmonthlychange
@@ -251,7 +256,7 @@ sjPlot::tab_model(vartheme1G,
                   collapse.se = TRUE,
                   p.style = c("scientific_stars"))
 ```
-```{r include=FALSE}
+```{r }
 #create function to retrieve IRF model info
 getIRFPlotData <- function(impulse, response, list) {
   cbind.data.frame(Theme = 0:(nrow(list[[1]][[1]])-1),
@@ -314,7 +319,7 @@ ggplot(plot_all, aes(x = Theme, y = irf)) +
 ggsave("RESULTS/IRF_Function.tiff", width=10.5, height=5, dpi=300)
 ```
 ###### Temporary Population Control
-```{r include=FALSE}
+```{r }
 linedigital <- read.csv("https://dataverse.harvard.edu/api/access/datafile/6380746")
 linedigital <- linedigital %>%
   mutate(date = ymd(linedigital$val)) %>%
@@ -322,7 +327,7 @@ linedigital <- linedigital %>%
 head(linedigital)
 ```
 
-```{r include=FALSE}
+```{r }
 ggplot(mydatalong, aes(date, theta)) + 
   geom_line(size = 0.5) + 
   scale_x_date(date_breaks="2 months", date_labels = "%b-%Y")+
@@ -367,7 +372,7 @@ lineleader <- lineleader %>%
 head(lineleader)
 ```
 
-```{r include=FALSE}
+```{r }
 ggplot(mydatalong, aes(date, theta)) + 
   geom_line(size = 0.5) + 
   scale_x_date(date_breaks="2 months", date_labels = "%b-%Y")+
@@ -402,3 +407,4 @@ ggplot(mydatalong, aes(date, theta)) +
 ggsave("RESULTS/AN_Governance_071722.tiff", width=12.5, height=5, dpi=300)
 
 ````
+
