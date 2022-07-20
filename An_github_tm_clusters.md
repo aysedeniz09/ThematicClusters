@@ -516,7 +516,7 @@ save(meta_theta_df_comm_lv, file="AN_k30_Meta_Theta_Df_Louvain_DATE.Rda")
     [downloadurl](https://dataverse.harvard.edu/api/access/datafile/6388550)
 
 ``` r
-# color codes themesvalues=c("salmon", "gray", "skyblue4")
+# color codes orangered1, purple4, springgreen4
 mydatatemp<-aggregate(x=meta_theta_df_comm_lv[,which(colnames(meta_theta_df_comm_lv)=="OrangeG1"):which(colnames(meta_theta_df_comm_lv)=="GreenG3")],by=list(meta_theta_df_comm_lv$Date),FUN="mean")
 
 mydatalong<-mydatatemp %>% 
