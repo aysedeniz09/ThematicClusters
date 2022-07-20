@@ -11,7 +11,7 @@ The data set accompanying the code: <https://doi.org/10.7910/DVN/FAP771>
 
 For questions, or more information on the code please contact: 
 Ayse D. Lokmanoglu\
-ayse [dot] lokmanoglu [at] nortwestern [dot] edu
+ayse [dot] lokmanoglu [at] northwestern [dot] edu
 
 
 
