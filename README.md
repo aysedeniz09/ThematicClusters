@@ -6,7 +6,7 @@ The code below includes all the steps of the methodology, and the visualizations
 
 The data set accompanying the code: <https://doi.org/10.7910/DVN/FAP771>
 
-1. The code for creating networked clusters
+1. The [code](https://github.com/aysedeniz09/ThematicClusters/blob/main/An_github_tm_clusters.md) for creating networked clusters
 2. The [code](https://github.com/aysedeniz09/ThematicClusters/blob/main/AN_github_v2.md) for regression analysis
 
 For questions, or more information on the code please contact: 
