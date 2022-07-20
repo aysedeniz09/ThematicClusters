@@ -496,7 +496,7 @@ mynewnet<-network_from_LDA(LDAobject=LDAfit,
 save(mynewnet, file="AN_antmn_DATE.Rda")
 ```
 
-5.  Open file in [Gephi](https://gephi.org/) to visualize it.![Network
+5.  Open file in [Gephi](https://gephi.org/) to visualize it with Louvain algorithm.![Network
     Graph](https://github.com/aysedeniz09/ThematicClusters/blob/main/AN%20Network%208.8.21.png?raw=true)
 6.  Calculate networked clusters
 
