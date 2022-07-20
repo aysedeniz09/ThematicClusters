@@ -49,8 +49,8 @@ library(openxlsx)
 library(ggthemes)
 ```
 
-Load pre-processed data frame with text column labelled as text. 1.
-Tokenize it
+Load pre-processed data frame with text column labelled as text. 
+1. Tokenize it
 
 ``` r
 toks <- tokens(mydata$text,
