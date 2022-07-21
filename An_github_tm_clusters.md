@@ -254,7 +254,7 @@ lda.30.05 <- LDA(dtm_lda,30,
            control = list(alpha=0.05,seed=125231)) #set a random seed 
 save(lda.30.05, file="AN_k30_DATE.Rda")
 
-LDAfit<-lda #copy the object it with a different name for backup
+LDAfit<-lda.30.05 #copy the object it with a different name for backup
 ```
 
 2.  Extract top words from the topic model
