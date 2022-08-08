@@ -13,7 +13,7 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 
 ### Textual Messaging of ISIS’s al-Naba and the Context Drivers that Correspond to Strategic Changes
 
-#### Authors: Ayse D. Lokmanoglu, PhD; Carol K. Winkler, PhD; Monerah AlMahmoud, PhD; Kayla McMinimy; Katherine Kountz
+#### Authors: Ayse D. Lokmanoglu, PhD; Carol K. Winkler, PhD; Monerah Almahmoud, PhD; Kayla McMinimy; Katherine Kountz
 #### Citation: Lokmanoglu, A. D., Winkler, C. K., Almahmoud, M., McMinimy, K., & Kountz, K. (2022). Textual Messaging of ISIS’s al-Naba and the Context Drivers That Correspond to Strategic Changes. Studies in Conflict & Terrorism, 1–25. https://doi.org/10.1080/1057610X.2022.2109245
 
 
