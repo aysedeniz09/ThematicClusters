@@ -1,5 +1,5 @@
 [![Static Badge](https://img.shields.io/badge/R-blue)](https://github.com/aysedeniz09/ThematicClusters)
-[![Static Badge](https://img.shields.io/badge/DOI-green)](http://dx.doi.org/10.1080/1057610X.2022.2109245)
+[![Static Badge](https://img.shields.io/badge/DOI:10.1080/1057610X.2022.2109245-yellow)](http://dx.doi.org/10.1080/1057610X.2022.2109245)
 
 
 ### Supplementary Code for:
