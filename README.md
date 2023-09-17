@@ -1,3 +1,7 @@
+[![Static Badge](https://img.shields.io/badge/R-blue)](https://github.com/aysedeniz09/ThematicClusters)
+[![Static Badge](https://img.shields.io/badge/DOI-green)](http://dx.doi.org/10.1080/1057610X.2022.2109245)
+
+
 ### Supplementary Code for:
 ### Textual Messaging of ISIS’s al-Naba and the Context Drivers that Correspond to Strategic Changes
 #### Authors: [Ayse D. Lokmanoglu, PhD](https://www.adenizlok.com/); [Carol K. Winkler, PhD](https://tcv.gsu.edu/profile/carol-winkler/); [Monerah Almahmoud, PhD](https://sites.google.com/view/almahmoudm/about); [Kayla McMinimy](https://tcv.gsu.edu/profile/kayla-mcminimy/); and, [Katherine Kountz](https://tcv.gsu.edu/profile/katherine-kountz/)
